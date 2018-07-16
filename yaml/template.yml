@@ -1,6 +1,19 @@
+#
+# Guidelines for writing YAML documents.
+# ======================================
+#
+#   - Try to keep ordering of the fields as is presented here
+#     in this document.
+#
+#
 
+#
+# Base type
+# ---------
+#
+#   - These fields are common for each YAML object type.
+#
 
-YamlObject:
 - ShortName: WC                           # General short name
   LongName: WC_SUPPORTED                  # General long name
   OriginalShortName: Wc                   # Suggested short name (by document/manual)
@@ -14,14 +27,15 @@ YamlObject:
 
   ShortDescription: Description doesn't end with dot
   LongDescription: |
-    Description ends with dot.
-  Description: Description is used as both long/short. Ends with dot.
+    Description must end with dot.
+  Description: Description is used as both long/short. Can be multiline. Must end with dot.
 
   ChildrenNameWithPrefix: GUEST           # Prepend to children's name (used in groups)
   ChildrenNameWithPostfix: REGISTER       # Appended to children's name (used in groups)
                                           # Use '$' for "Name".
 
-  Note:                                   # Additional notes.
+  Note: |                                 # Additional notes.
+    Add one to the return value to get the result.
 
   #
   # Note:
